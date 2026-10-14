@@ -228,3 +228,9 @@ form.f{display:grid;gap:14px}
 /* as seis áreas de desenvolvimento (FACEIS) */
 .faceis .letra{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:var(--verde);color:#fff;font:800 24px Montserrat;margin-bottom:12px}
 .faceis .cartao:nth-child(even) .letra{background:var(--laranja)}
+.faceis .def{font:700 13px Montserrat;letter-spacing:.14em;text-transform:uppercase;color:var(--verde-vivo);margin:-4px 0 8px}
+.faceis .cartao p:last-child{font-size:15px;color:var(--suave)}
+.ssa{grid-template-columns:1fr}
+.ssa div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 18px;display:flex;gap:14px;align-items:baseline}
+.ssa b{font:800 22px Montserrat;color:#fff;min-width:72px}
+.ssa span{color:#d9efe6;font-size:15.5px}
