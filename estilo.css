@@ -33,7 +33,7 @@ p{margin:0 0 1em}
 
 /* ---- sobretítulo «+ …» ---- */
 .kicker{font:800 13px/1.2 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--verde);margin:0 0 14px;display:flex;gap:10px;align-items:center}
-.kicker:before{content:"+";font-size:16px;letter-spacing:0;color:var(--laranja)}
+.kicker:before{content:"";width:13px;height:13px;flex:none;background:url(img/icones/mais-laranja.png) center/contain no-repeat}
 .kicker.claro{color:#cfeee2}
 .lead{font-size:clamp(18px,2.2vw,21px);color:var(--suave);max-width:760px}
 
@@ -235,3 +235,6 @@ form.f{display:grid;gap:14px}
 .ssa b{font:800 22px Montserrat;color:#fff;min-width:72px}
 .ssa span{color:#d9efe6;font-size:15.5px}
 .faceis .ic-area{width:58px;height:auto;margin-bottom:12px}
+
+/* o «+» da identidade do CNE, como nos sobretítulos */
+.mais{display:inline-block;width:.62em;height:.62em;margin:0 .1em 0 .02em;vertical-align:.02em;background:url(img/icones/mais-laranja.png) center/contain no-repeat}
