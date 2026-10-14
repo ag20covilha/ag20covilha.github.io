@@ -1,0 +1,207 @@
+/* Agrupamento 20 Covilhã — o estilo do site.
+   A identidade é a do Conselho de Pais e do Plano de Atividades 2026/2027:
+   verde CNE, laranja nos botões, a risca das quatro secções, sobretítulos
+   em versaletes espaçados com «+», Montserrat nos títulos e Nunito Sans no
+   texto, e as quatro cores das secções. */
+:root{
+  --verde:#1D6B54; --verde-esc:#15452f; --verde-vivo:#2B966C; --verde-fundo:#E3F4EE;
+  --laranja:#E26830; --laranja-esc:#b94f1d; --azul:#2A5977; --dourado:#7A5C00; --roxo:#6E3AA8; --noite:#1C1433;
+  --creme:#FBF3D2; --creme-2:#FDF7B9; --tinta:#15241C; --suave:#566259; --tenue:#7d8a83;
+  --fundo:#F6F7F4; --branco:#fff; --linha:#E1E6E2;
+  --lobitos:#EAC634; --exploradores:#4FB798; --pioneiros:#2A5977; --caminheiros:#DF3443;
+  --raio:18px; --sombra:0 1px 0 rgba(21,36,28,.06),0 10px 30px -12px rgba(21,36,28,.18);
+  --larg:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:17px/1.62 "Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--verde);text-underline-offset:3px}
+a:hover{color:var(--verde-esc)}
+h1,h2,h3,h4{font-family:Montserrat,sans-serif;letter-spacing:-.02em;line-height:1.12;margin:0 0 .5em;color:var(--tinta)}
+h1{font-size:clamp(34px,6vw,64px);font-weight:800}
+h2{font-size:clamp(26px,3.6vw,40px);font-weight:800}
+h3{font-size:21px;font-weight:700}
+p{margin:0 0 1em}
+.saltar{position:absolute;left:-999px;top:8px;background:var(--laranja);color:#fff;padding:8px 14px;border-radius:999px;z-index:99}
+.saltar:focus{left:12px}
+.dentro{max-width:var(--larg);margin:0 auto;padding:0 20px}
+.risca{display:flex;height:6px}
+.risca i{flex:1}
+.risca i:nth-child(1){background:var(--lobitos)}.risca i:nth-child(2){background:var(--exploradores)}
+.risca i:nth-child(3){background:var(--pioneiros)}.risca i:nth-child(4){background:var(--caminheiros)}
+
+/* ---- sobretítulo «+ …» ---- */
+.kicker{font:800 13px/1.2 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--verde);margin:0 0 14px;display:flex;gap:10px;align-items:center}
+.kicker:before{content:"+";font-size:16px;letter-spacing:0;color:var(--laranja)}
+.kicker.claro{color:#cfeee2}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--suave);max-width:760px}
+
+/* ---- cabeçalho ---- */
+.topo{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--linha)}
+.topo-in{max-width:var(--larg);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:20px}
+.marca img{width:150px;height:auto}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;flex-wrap:wrap}
+nav{margin-left:auto}
+nav a{display:block;padding:9px 12px;border-radius:999px;font:700 14.5px Montserrat,sans-serif;color:var(--tinta);text-decoration:none;letter-spacing:-.005em}
+nav a:hover{background:var(--verde-fundo);color:var(--verde-esc)}
+nav a[aria-current=page]{background:var(--verde);color:#fff}
+.menu-bt{display:none;margin-left:auto;width:46px;height:46px;border:1px solid var(--linha);background:#fff;border-radius:14px;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.menu-bt span{display:block;width:20px;height:2px;background:var(--tinta);border-radius:2px}
+@media (max-width:1060px){
+  .menu-bt{display:flex}
+  nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--linha);display:none;box-shadow:var(--sombra)}
+  nav.aberto{display:block}
+  nav ul{flex-direction:column;padding:10px 14px 16px}
+  nav a{padding:12px 14px;font-size:16px}
+}
+
+/* ---- botões ---- */
+.bt{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font:800 15.5px Montserrat,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.bt:hover{transform:translateY(-1px)}
+.bt-laranja{background:var(--laranja);color:#fff}
+.bt-laranja:hover{background:var(--laranja-esc);color:#fff}
+.bt-branco{border-color:rgba(255,255,255,.7);color:#fff}
+.bt-branco:hover{background:rgba(255,255,255,.12);color:#fff}
+.bt-verde{background:var(--verde);color:#fff}
+.bt-verde:hover{background:var(--verde-esc);color:#fff}
+.bt-contorno{border-color:var(--verde);color:var(--verde)}
+.bts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.pilula{display:inline-block;background:var(--laranja);color:#fff;font:800 13px Montserrat,sans-serif;padding:6px 14px;border-radius:999px;letter-spacing:.01em}
+.breve{display:inline-block;background:var(--creme-2);color:var(--dourado);font:800 11px Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;vertical-align:middle}
+
+/* ---- herói ---- */
+.heroi{position:relative;overflow:hidden;background:var(--verde);color:#fff}
+.heroi:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 20%,rgba(43,150,108,.55),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(21,69,47,.7),transparent 60%)}
+.heroi .dentro{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:84px}
+.heroi h1{color:#fff}
+.heroi .lead{color:#d9efe6}
+.heroi .emblema{justify-self:center;width:min(420px,92%);background:#fff;border-radius:28px;padding:34px 30px;box-shadow:0 24px 50px -18px rgba(0,0,0,.45)}
+
+.heroi-sub .dentro{display:block;padding-top:60px;padding-bottom:64px}
+@media (max-width:820px){.heroi .dentro{grid-template-columns:1fr}.heroi .emblema{width:220px;order:-1}}
+
+/* ---- blocos ---- */
+.bloco{padding:76px 0}
+.bloco.branco{background:#fff}
+.bloco.creme{background:var(--creme)}
+.bloco.verde{background:var(--verde);color:#fff}
+.bloco.verde h2,.bloco.verde h3{color:#fff}
+.bloco.verde .lead{color:#d9efe6}
+.cab{max-width:780px;margin-bottom:36px}
+.grade{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.cartao{background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:26px;box-shadow:var(--sombra)}
+.cartao h3{margin-top:4px}
+.cartao p:last-child{margin-bottom:0}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media (max-width:860px){.duas{grid-template-columns:1fr;gap:28px}}
+.foto{border-radius:22px;overflow:hidden;box-shadow:var(--sombra)}
+.foto img{width:100%;height:100%;object-fit:cover}
+.credito{font-size:12.5px;color:var(--tenue);margin-top:8px}
+
+/* ---- acesso rápido: as ferramentas ---- */
+.ferramentas{margin-top:-46px;position:relative;z-index:2}
+.ferr{display:flex;gap:16px;align-items:flex-start;text-decoration:none;color:var(--tinta);background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:22px;box-shadow:var(--sombra);transition:transform .15s,box-shadow .15s;height:100%}
+.ferr:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(21,36,28,.35);color:var(--tinta)}
+.ferr .ic{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--verde);color:#fff}
+.ferr .ic img{width:30px;height:30px}
+.ferr .ic.laranja{background:var(--laranja)}.ferr .ic.azul{background:var(--azul)}.ferr .ic.creme{background:var(--creme-2)}
+.ferr h3{font-size:18px;margin:2px 0 4px}
+.ferr p{font-size:14.5px;color:var(--suave);margin:0}
+
+/* ---- as quatro secções ---- */
+.seccoes{display:grid;grid-template-columns:repeat(4,1fr);border-radius:22px;overflow:hidden;box-shadow:var(--sombra)}
+.sec{padding:30px 24px 28px;color:#fff;display:flex;flex-direction:column;gap:6px;min-height:300px}
+.sec img{width:52px;height:52px;margin-bottom:10px}
+.sec .q{font:800 12px Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;opacity:.9}
+.sec h3{color:inherit;font-size:22px;margin:4px 0}
+.sec p{font-size:15px;margin:0;opacity:.95}
+.sec .idade{margin-top:auto;font:800 14px Montserrat,sans-serif;background:rgba(255,255,255,.18);border-radius:999px;padding:6px 12px;align-self:flex-start}
+.sec.i{background:var(--lobitos);color:#2c2508}.sec.i .idade{background:rgba(0,0,0,.08)}
+.sec.ii{background:var(--exploradores);color:#0f2a21}.sec.ii .idade{background:rgba(0,0,0,.08)}
+.sec.iii{background:var(--pioneiros)}.sec.iv{background:var(--caminheiros)}
+@media (max-width:960px){.seccoes{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.seccoes{grid-template-columns:1fr}.sec{min-height:0}}
+
+/* ---- ícones em círculo creme (como nos diapositivos) ---- */
+.circ{width:84px;height:84px;border-radius:50%;background:var(--creme-2);display:grid;place-items:center;margin-bottom:14px}
+.circ img{width:46px;height:46px}
+.etapas{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;counter-reset:e}
+.etapa{background:var(--creme-2);border-radius:16px;padding:18px 16px;position:relative}
+.etapa:before{counter-increment:e;content:counter(e);position:absolute;top:-10px;left:14px;width:26px;height:26px;border-radius:50%;background:var(--laranja);color:#fff;font:800 13px/26px Montserrat;text-align:center}
+.etapa h3{font-size:17px;margin:8px 0 4px}
+.etapa p{font-size:14px;color:var(--suave);margin:0}
+@media (max-width:960px){.etapas{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.etapas{grid-template-columns:1fr 1fr}}
+.citacao{font:700 italic clamp(20px,2.6vw,26px)/1.4 "Nunito Sans",sans-serif;color:var(--verde);border-left:4px solid var(--laranja);padding:4px 0 4px 20px;margin:28px 0}
+
+/* ---- calendário ---- */
+.legenda{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--suave);margin:0 0 22px}
+.legenda span{display:inline-flex;align-items:center;gap:7px}
+.legenda i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.meses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:960px){.meses{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.meses{grid-template-columns:1fr}}
+.mes{background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:20px 20px 10px}
+.mes h3{font-size:18px;border-bottom:2px solid var(--linha);padding-bottom:8px}
+.mes ul{list-style:none;margin:0;padding:0}
+.mes li{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-top:1px solid #f0f2ef;font-size:15px;line-height:1.35}
+.mes li:first-child{border-top:0}
+.dia{flex:none;min-width:54px;text-align:center;font:800 12.5px Montserrat,sans-serif;color:#fff;background:var(--laranja);border-radius:999px;padding:5px 8px}
+.dia.reg{background:var(--roxo)}.dia.nac{background:#fff;color:var(--tinta);border:2px solid var(--tinta);padding:3px 6px}
+.dia.int{background:var(--noite)}.dia.lob{background:var(--lobitos);color:#2c2508}.dia.exp{background:var(--exploradores);color:#0f2a21}
+.dia.pio{background:var(--pioneiros)}.dia.cam{background:var(--caminheiros)}
+.mes small{display:block;color:var(--tenue);font-size:12.5px}
+
+/* ---- listas e tabelas ---- */
+.lista-check{list-style:none;padding:0;margin:0}
+.lista-check li{padding:8px 0 8px 32px;position:relative;border-top:1px solid var(--linha)}
+.lista-check li:first-child{border-top:0}
+.lista-check li:before{content:"";position:absolute;left:4px;top:15px;width:14px;height:8px;border-left:3px solid var(--verde-vivo);border-bottom:3px solid var(--verde-vivo);transform:rotate(-45deg)}
+table.t{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);font-size:15.5px}
+table.t th{background:var(--verde);color:#fff;text-align:left;font:700 13px Montserrat;letter-spacing:.06em;text-transform:uppercase;padding:12px 16px}
+table.t td{padding:12px 16px;border-top:1px solid var(--linha);vertical-align:top}
+.aviso{background:var(--creme-2);border-radius:16px;padding:16px 20px;color:#4b3b00;font-size:15.5px}
+.aviso b{color:#3a2d00}
+
+/* ---- formulários ---- */
+form.f{display:grid;gap:14px}
+.f label{font:700 14px Montserrat;display:block;margin-bottom:6px}
+.f input,.f select,.f textarea{width:100%;font:inherit;font-size:16px;padding:13px 15px;border:1.5px solid #cfd8d2;border-radius:14px;background:#fff;color:var(--tinta)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:3px solid rgba(43,150,108,.25);border-color:var(--verde-vivo)}
+.f textarea{min-height:150px;resize:vertical}
+.f .nota{font-size:13.5px;color:var(--tenue)}
+.embutido{width:100%;min-height:900px;border:0;border-radius:var(--raio);background:#fff;box-shadow:var(--sombra)}
+
+/* ---- rodapé ---- */
+.rodape{background:var(--verde-esc);color:#d6e7df;margin-top:0}
+.rodape-in{max-width:var(--larg);margin:0 auto;padding:56px 20px 30px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:34px}
+.rodape h2{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.rodape a{color:#fff;text-decoration:none}
+.rodape a:hover{text-decoration:underline;color:#fff}
+.rodape ul{list-style:none;margin:0;padding:0}
+.rodape li{padding:4px 0}
+.rp-marca img{width:180px;margin-bottom:16px}
+.rp-marca p{font-size:14px;line-height:1.55}
+.rodape .copy{max-width:var(--larg);margin:0 auto;padding:18px 20px 28px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:#a9c4b8}
+@media (max-width:860px){.rodape-in{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.rodape-in{grid-template-columns:1fr}}
+
+/* ---- galeria (src/img/fotos/agrupamento/) ---- */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 28px}
+.galeria figure{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:1;background:var(--linha)}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.galeria figure:hover img{transform:scale(1.04)}
+@media (max-width:760px){.galeria{grid-template-columns:repeat(2,1fr)}}
+
+/* ---- ligações externas: sem logótipos que não são os deles ---- */
+.ext{display:flex;justify-content:space-between;align-items:center;gap:14px;text-decoration:none;color:var(--tinta);background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:20px 22px;box-shadow:var(--sombra);transition:transform .15s}
+.ext:hover{transform:translateY(-2px);color:var(--tinta)}
+.ext h3{font-size:18px;margin:0 0 3px}.ext p{margin:0;font-size:14.5px;color:var(--suave)}
+.ext .seta{flex:none;width:36px;height:36px;border-radius:50%;background:var(--verde-fundo);color:var(--verde);display:grid;place-items:center;font:800 17px Montserrat}
+.ext small{display:block;font:700 12px Montserrat;letter-spacing:.06em;color:var(--verde-vivo);margin-top:6px}
+.logo-parceiro{background:#fff;border-radius:22px;padding:28px;box-shadow:var(--sombra);display:grid;place-items:center}
+.logo-parceiro img{max-width:340px;width:100%;height:auto}
