@@ -205,3 +205,7 @@ form.f{display:grid;gap:14px}
 .ext small{display:block;font:700 12px Montserrat;letter-spacing:.06em;color:var(--verde-vivo);margin-top:6px}
 .logo-parceiro{background:#fff;border-radius:22px;padding:28px;box-shadow:var(--sombra);display:grid;place-items:center}
 .logo-parceiro img{max-width:340px;width:100%;height:auto}
+
+/* um cartão de ferramenta que ainda não abre nada (ex.: o fardamento sem o link do formulário) */
+.ferr.sem-link{cursor:default}
+.ferr.sem-link:hover{transform:none;box-shadow:var(--sombra)}
