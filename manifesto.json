@@ -1,0 +1,21 @@
+{
+  "name": "Amarra · Agrupamento 20 Covilhã",
+  "short_name": "Amarra",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#2B966C",
+  "theme_color": "#2B966C",
+  "icons": [
+    {
+      "src": "amarra-180-v3.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "amarra-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
