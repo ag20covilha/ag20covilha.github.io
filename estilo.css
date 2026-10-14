@@ -224,3 +224,7 @@ form.f{display:grid;gap:14px}
   .t-contactos td:nth-child(2):before{content:"Idades: "}
   .t-contactos td:last-child a{word-break:break-all}
 }
+
+/* as seis áreas de desenvolvimento (FACEIS) */
+.faceis .letra{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:var(--verde);color:#fff;font:800 24px Montserrat;margin-bottom:12px}
+.faceis .cartao:nth-child(even) .letra{background:var(--laranja)}
