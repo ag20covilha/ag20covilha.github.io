@@ -209,3 +209,18 @@ form.f{display:grid;gap:14px}
 /* um cartão de ferramenta que ainda não abre nada (ex.: o fardamento sem o link do formulário) */
 .ferr.sem-link{cursor:default}
 .ferr.sem-link:hover{transform:none;box-shadow:var(--sombra)}
+
+/* a tabela de contactos no telemóvel: cada linha passa a bloco — nome, idades
+   e o email por baixo — sem deslizar para o lado */
+@media (max-width:640px){
+  .t-contactos thead{display:none}
+  .t-contactos,.t-contactos tbody,.t-contactos tr,.t-contactos td{display:block;width:100%}
+  .t-contactos tr{padding:12px 16px;border-top:1px solid var(--linha)}
+  .t-contactos tr:first-child{border-top:0}
+  table.t.t-contactos td{border:0;padding:2px 0}
+  .t-contactos td:empty{display:none}
+  .t-contactos td:first-child{font-weight:800}
+  .t-contactos td:nth-child(2){font-size:14px;color:var(--suave)}
+  .t-contactos td:nth-child(2):before{content:"Idades: "}
+  .t-contactos td:last-child a{word-break:break-all}
+}
