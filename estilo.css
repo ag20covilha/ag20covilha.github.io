@@ -182,9 +182,11 @@ form.f{display:grid;gap:14px}
 .rodape h2{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:14px}
 .rodape a{color:#fff;text-decoration:none}
 .rodape a:hover{text-decoration:underline;color:#fff}
-.rodape .redes{display:flex;flex-wrap:wrap;gap:10px 22px}
-.rodape .redes a{display:inline-flex;align-items:center;gap:9px}
-.rodape .redes svg{width:22px;height:22px;fill:currentColor;flex:none}
+.rodape .redes{display:flex;flex-wrap:nowrap;gap:14px;white-space:nowrap}
+.rodape .redes a{display:inline-flex;align-items:center;gap:7px}
+.rodape .redes svg{width:20px;height:20px;flex:none}
+.rodape .redes svg[fill="currentColor"]{fill:currentColor}
+.rodape .redes a+a{border-left:1px solid rgba(255,255,255,.3);padding-left:14px}
 .rodape ul{list-style:none;margin:0;padding:0}
 .rodape li{padding:4px 0}
 .rp-marca img{width:180px;margin-bottom:16px}
