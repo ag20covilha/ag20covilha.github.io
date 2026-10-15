@@ -130,7 +130,7 @@
     </div>
     <div>
       <h2>Ferramentas</h2>
-      <ul><li><a href="https://ag20covilha.github.io/amarra/">Amarra — a app das secções <span class="breve">em breve</span></a></li>
+      <ul><li><a href="https://ag20covilha.github.io/amarra/">Amarra — a app das secções <span class="breve" data-amarra-breve>em breve</span></a></li>
         <li><a href="cese.html">CESE — reservas <span class="breve">em breve</span></a></li>
         <li>Encomendar fardamento <span class="breve">em breve</span></li></ul>
     </div>
@@ -144,4 +144,9 @@
   <p class="copy">© 2026 Agrupamento 20 Covilhã · Corpo Nacional de Escutas · Todos os direitos reservados</p>
 </footer>
 <script src="app.js" defer></script>
+<!-- A Amarra deixa de estar «em breve» quando o Chefe de Unidade de uma secção a
+     abre a todos. Quem sabe é a própria app: o estado.js vem do site da Amarra
+     (ag20covilha.github.io/amarra, gerado no repositório dela) e pergunta-lhe.
+     Sem resposta, fica «em breve». -->
+<script src="https://ag20covilha.github.io/amarra/estado.js" async onload="if(window.AmarraEstado)AmarraEstado.alguma(function(a){if(a===true)document.querySelectorAll('[data-amarra-breve]').forEach(function(e){e.remove()})})"></script>
 </body></html>
