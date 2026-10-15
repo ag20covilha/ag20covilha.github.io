@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="img/icone.png"><link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap">
-<link rel="stylesheet" href="estilo.css?v=512aabb0">
+<link rel="stylesheet" href="estilo.css?v=fb05b04e">
 </head><body class="p-agrupamento">
 
 <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
@@ -116,7 +116,7 @@
       <h2>Ferramentas</h2>
       <ul><li><a href="https://ag20covilha.github.io/amarra/">Amarra — a app das secções <span class="breve" data-amarra-breve>em breve</span></a></li>
         <li><a href="cese.html">CESE — reservas <span class="breve">em breve</span></a></li>
-        <li>Encomendar fardamento <span class="breve">em breve</span></li></ul>
+        <li><a href="https://ag20covilha.github.io/fardamento/">Encomendar fardamento <span class="breve" data-fardamento-estado>em breve</span></a></li></ul>
     </div>
     <div>
       <h2>Escutismo</h2>
@@ -132,5 +132,7 @@
      abre a todos. Quem sabe é a própria app: o estado.js vem do site da Amarra
      (ag20covilha.github.io/amarra, gerado no repositório dela) e pergunta-lhe.
      Sem resposta, fica «em breve». -->
+<!-- O mesmo para o Fardamento: «abertas até…», «fechadas», ou «em breve» sem resposta. -->
+<script src="https://ag20covilha.github.io/fardamento/estado.js" async onload="if(window.FardamentoEstado)FardamentoEstado.perguntar(function(r){if(!r)return;document.querySelectorAll('[data-fardamento-estado]').forEach(function(e){e.textContent=r.aberta?('abertas'+(r.fechaA?' até '+r.fechaA.slice(0,5):'')):'fechadas';e.classList.add(r.aberta?'aberta':'fechada')})})"></script>
 <script src="https://ag20covilha.github.io/amarra/estado.js" async onload="if(window.AmarraEstado)AmarraEstado.alguma(function(a){if(a===true)document.querySelectorAll('[data-amarra-breve]').forEach(function(e){e.remove()})})"></script>
 </body></html>
