@@ -31,4 +31,29 @@
     var ok = document.getElementById('questoes-ok');
     if (ok) ok.hidden = false;
   });
+
+  /* O estado ao vivo da Amarra e do Fardamento: o estado.js de cada app
+     (agr20covilha.github.io/amarra e /fardamento) pergunta-lhe se está aberta.
+     Carregado daqui e não por um <script onload="…"> — a política de
+     segurança do site não deixa correr código inline. Sem resposta, fica
+     «em breve». */
+  function carregar(src, depois) {
+    if (!src) return;
+    var s = document.createElement('script'); s.src = src + 'estado.js'; s.async = true;
+    s.onload = depois; document.head.appendChild(s);
+  }
+  carregar(document.body.getAttribute('data-amarra'), function () {
+    if (window.AmarraEstado) AmarraEstado.alguma(function (a) {
+      if (a === true) document.querySelectorAll('[data-amarra-breve]').forEach(function (e) { e.remove(); });
+    });
+  });
+  carregar(document.body.getAttribute('data-fardamento'), function () {
+    if (window.FardamentoEstado) FardamentoEstado.perguntar(function (r) {
+      if (!r) return;
+      document.querySelectorAll('[data-fardamento-estado]').forEach(function (e) {
+        e.textContent = r.aberta ? ('abertas' + (r.fechaA ? ' até ' + r.fechaA.slice(0, 5) : '')) : 'fechadas';
+        e.classList.add(r.aberta ? 'aberta' : 'fechada');
+      });
+    });
+  });
 })();

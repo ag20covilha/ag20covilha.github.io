@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="pt-PT"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- SEGURANÇA (16-10-2026): só scripts do próprio site e as respostas das apps (Google);
+     nada inline. O GitHub Pages não deixa pôr cabeçalhos, por isso vai como meta. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://agr20covilha.github.io https://script.google.com https://script.googleusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Contactos · Agrupamento 20 Covilhã</title>
 <meta name="description" content="Contactos do Agrupamento 20 Covilhã: email, sede, redes sociais, inscrições e um formulário para deixar as suas questões.">
 <meta name="theme-color" content="#1D6B54">
@@ -10,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap">
 <link rel="stylesheet" href="estilo.css?v=fb05b04e">
-</head><body class="p-contactos">
+</head><body class="p-contactos" data-amarra="https://agr20covilha.github.io/amarra/" data-fardamento="https://agr20covilha.github.io/fardamento/">
 
 <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
 <header class="topo">
@@ -124,11 +128,4 @@
   <p class="copy">© 2026 Agrupamento 20 Covilhã · Corpo Nacional de Escutas · Todos os direitos reservados</p>
 </footer>
 <script src="app.js" defer></script>
-<!-- A Amarra deixa de estar «em breve» quando o Chefe de Unidade de uma secção a
-     abre a todos. Quem sabe é a própria app: o estado.js vem do site da Amarra
-     (agr20covilha.github.io/amarra, gerado no repositório dela) e pergunta-lhe.
-     Sem resposta, fica «em breve». -->
-<!-- O mesmo para o Fardamento: «abertas até…», «fechadas», ou «em breve» sem resposta. -->
-<script src="https://agr20covilha.github.io/fardamento/estado.js" async onload="if(window.FardamentoEstado)FardamentoEstado.perguntar(function(r){if(!r)return;document.querySelectorAll('[data-fardamento-estado]').forEach(function(e){e.textContent=r.aberta?('abertas'+(r.fechaA?' até '+r.fechaA.slice(0,5):'')):'fechadas';e.classList.add(r.aberta?'aberta':'fechada')})})"></script>
-<script src="https://agr20covilha.github.io/amarra/estado.js" async onload="if(window.AmarraEstado)AmarraEstado.alguma(function(a){if(a===true)document.querySelectorAll('[data-amarra-breve]').forEach(function(e){e.remove()})})"></script>
 </body></html>
