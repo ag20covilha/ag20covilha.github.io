@@ -5,7 +5,7 @@
 <meta name="description" content="Lobitos (6–10), Exploradores (10–14), Pioneiros (14–18) e Caminheiros (18–22): as quatro secções do Agrupamento 20 Covilhã.">
 <meta name="theme-color" content="#1D6B54">
 <meta property="og:title" content="Secções · Agrupamento 20 Covilhã"><meta property="og:description" content="Lobitos (6–10), Exploradores (10–14), Pioneiros (14–18) e Caminheiros (18–22): as quatro secções do Agrupamento 20 Covilhã.">
-<meta property="og:image" content="https://ag20covilha.github.io/img/partilha.png"><meta property="og:locale" content="pt_PT">
+<meta property="og:image" content="https://agr20covilha.github.io/img/partilha.png"><meta property="og:locale" content="pt_PT">
 <link rel="icon" type="image/png" href="img/icone.png"><link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap">
@@ -135,9 +135,9 @@
     </div>
     <div>
       <h2>Ferramentas</h2>
-      <ul><li><a href="https://ag20covilha.github.io/amarra/">Amarra — a app das secções <span class="breve" data-amarra-breve>em breve</span></a></li>
+      <ul><li><a href="https://agr20covilha.github.io/amarra/">Amarra — a app das secções <span class="breve" data-amarra-breve>em breve</span></a></li>
         <li><a href="cese.html">CESE — reservas <span class="breve">em breve</span></a></li>
-        <li><a href="https://ag20covilha.github.io/fardamento/">Encomendar fardamento <span class="breve" data-fardamento-estado>em breve</span></a></li></ul>
+        <li><a href="https://agr20covilha.github.io/fardamento/">Encomendar fardamento <span class="breve" data-fardamento-estado>em breve</span></a></li></ul>
     </div>
     <div>
       <h2>Escutismo</h2>
@@ -151,9 +151,9 @@
 <script src="app.js" defer></script>
 <!-- A Amarra deixa de estar «em breve» quando o Chefe de Unidade de uma secção a
      abre a todos. Quem sabe é a própria app: o estado.js vem do site da Amarra
-     (ag20covilha.github.io/amarra, gerado no repositório dela) e pergunta-lhe.
+     (agr20covilha.github.io/amarra, gerado no repositório dela) e pergunta-lhe.
      Sem resposta, fica «em breve». -->
 <!-- O mesmo para o Fardamento: «abertas até…», «fechadas», ou «em breve» sem resposta. -->
-<script src="https://ag20covilha.github.io/fardamento/estado.js" async onload="if(window.FardamentoEstado)FardamentoEstado.perguntar(function(r){if(!r)return;document.querySelectorAll('[data-fardamento-estado]').forEach(function(e){e.textContent=r.aberta?('abertas'+(r.fechaA?' até '+r.fechaA.slice(0,5):'')):'fechadas';e.classList.add(r.aberta?'aberta':'fechada')})})"></script>
-<script src="https://ag20covilha.github.io/amarra/estado.js" async onload="if(window.AmarraEstado)AmarraEstado.alguma(function(a){if(a===true)document.querySelectorAll('[data-amarra-breve]').forEach(function(e){e.remove()})})"></script>
+<script src="https://agr20covilha.github.io/fardamento/estado.js" async onload="if(window.FardamentoEstado)FardamentoEstado.perguntar(function(r){if(!r)return;document.querySelectorAll('[data-fardamento-estado]').forEach(function(e){e.textContent=r.aberta?('abertas'+(r.fechaA?' até '+r.fechaA.slice(0,5):'')):'fechadas';e.classList.add(r.aberta?'aberta':'fechada')})})"></script>
+<script src="https://agr20covilha.github.io/amarra/estado.js" async onload="if(window.AmarraEstado)AmarraEstado.alguma(function(a){if(a===true)document.querySelectorAll('[data-amarra-breve]').forEach(function(e){e.remove()})})"></script>
 </body></html>
